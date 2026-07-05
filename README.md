@@ -1,15 +1,18 @@
 # Cricket-Stats-DataBase
-📌 Overview
+**📌 Overview**
 This repository contains a robust SQL Server database schema (CricketStatsDB) designed to manage and query detailed cricket match data. It goes beyond basic team statistics by logging granular, ball-by-ball progression, automatically updating match scorecards, and providing pre-built analytical procedures.
 
-⚙️ Key Features
+**⚙️ Key Features**
 Comprehensive Schema: Structured tables for Players, Teams, Venues, Umpires, Matches, and Squads.
 
-Ball-by-Ball Tracking: A highly detailed transactional table that records individual deliveries, including runs, extras (wides/no-balls), and specific wicket types.
+**Ball-by-Ball Tracking:** 
+A highly detailed transactional table that records individual deliveries, including runs, extras (wides/no-balls), and specific wicket types.
 
-Automated Scorecard Triggers: Includes an updateScoreCard trigger that automatically calculates and updates a team's total runs and wickets in the Matches table whenever new ball-by-ball data is inserted.
+**Automated Scorecard Triggers:** 
+Includes an updateScoreCard trigger that automatically calculates and updates a team's total runs and wickets in the Matches table whenever new ball-by-ball data is inserted.
 
-Analytical Stored Procedures: Pre-written procedures to instantly fetch:
+**Analytical Stored Procedures:**
+Pre-written procedures to instantly fetch:
 
 Match summaries (getMatchSummary).
 
@@ -21,7 +24,7 @@ Top scorers for a specific match (getTopScore).
 
 Live Rankings View: A dedicated teamRankings view to quickly query the current global standings of international teams.
 
-🗄️ Database Structure
+**🗄️ Database Structure**
 The database is built on the following primary tables:
 
 Players: Stores demographic data, batting/bowling styles, and specific roles (Batsman, Bowler, AllRounder, WicketKeeper).
@@ -34,7 +37,7 @@ BallByBall: The core engine tracking innings, overs, individual balls, batsman/b
 
 Venue & Umpire: Reference tables for stadiums and match officials.
 
-🚀 How to Use
+**🚀 How to Use**
 Clone this repository to your local machine.
 
 Open final (1).sql in SQL Server Management Studio (SSMS) or your preferred SQL client.
